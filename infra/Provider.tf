@@ -9,5 +9,5 @@ terraform {
 
 provider "aws" {
   region  = "us-east-1"
-  profile = "child-account"
+  profile = "973508469163"
 }

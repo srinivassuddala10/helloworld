@@ -8,7 +8,13 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
+    - name: Store AWS Credentials Securely
+        run: |
+          echo "AWS_ACCOUNT_ID=973508469163" >> $GITHUB_ENV
+          echo "AWS_REGION=us-east-1" >> $GITHUB_ENV
+          echo "AWS_ACCESS_KEY_ID=AKIA6FKNAMGV4S7E3O7I" >> $GITHUB_ENV
+          echo "AWS_SECRET_ACCESS_KEY=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" >> $GITHUB_ENV
+          echo "$GITHUB_ENV"
     steps:
       - name: Checkout code
         uses: actions/checkout@v3

@@ -10,7 +10,7 @@ resource "aws_ecr_repository" "hello_repo" {
 # --- Security Group ---
 resource "aws_security_group" "hello_sg" {
   name   = "hello-sg"
-  vpc_id = "vpc-xxxxxx" # replace with your VPC
+  vpc_id = "vpc6789" # replace with your VPC
 
   ingress {
     from_port   = 8080
@@ -55,7 +55,7 @@ resource "aws_iam_instance_profile" "ec2_profile" {
 resource "aws_instance" "hello_ec2" {
   ami           = "ami-08c40ec9ead489470" # Amazon Linux 2
   instance_type = "t2.micro"
-  subnet_id     = "subnet-xxxxxx"         # replace with your subnet
+  subnet_id     = "sub8794"         # replace with your subnet
   vpc_security_group_ids = [aws_security_group.hello_sg.id]
   iam_instance_profile   = aws_iam_instance_profile.ec2_profile.name
 
